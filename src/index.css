@@ -1,0 +1,80 @@
+.courier{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+.error-alert{
+  background-color: lightcoral;
+  animation-name:error;
+  animation-duration: .1s;
+  animation-iteration-count:1;
+  animation-timing-function:ease-in-out;
+}
+@keyframes error{
+  from{
+    height: 0px;
+    opacity: 0;
+  }
+  to{
+    height: 20px;
+    opacity: 1;
+  }
+}
+.alert{
+  animation-name:alert;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function:ease-in-out;
+}
+@keyframes alert{
+  from {background-color: orange;}
+  to {background-color: white;}
+}
+.x{
+  color:black;
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+.x:hover {
+  color:firebrick
+}
+.text-lightgray{
+  color: lightgray;
+}
+.sc{
+  font-variant: small-caps;
+}
+.cursor{
+  cursor: pointer;
+}
+.add-task{
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  font-size: 40px;
+  color:lightslategrey;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navhover:hover{
+  background-color: lightgray;
+}
+.add-button{
+  opacity: 0;
+  position:"relative";
+  right:"-15px";
+  top:"-5px";
+  z-index:"-1"
+}
+.add-icon{
+  font-size: 40px;
+}
+.add-icon:hover .add-button{
+  opacity: 1;
+}
