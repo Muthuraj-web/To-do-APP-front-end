@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import AuthForm  from './common/AuthForm';
 import Axios from 'axios';
+import {Auth} from './common/urls'
 import {isEmail} from './common/validation'
 import "../index.css"
 
@@ -44,7 +45,7 @@ class Auth extends Component {
             return ;
         }
 
-        const {data} = await Axios.post(`http://localhost:8080/auth/${active}`,item)
+        const {data} = await Axios.post(`${Auth}/${active}`,item)
         if(data.token){
             localStorage.setItem('jwt',data.token)
             this.props.history.replace('/home')
